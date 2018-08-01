@@ -1,0 +1,17 @@
+{
+  "name": "hoc",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "BABEL_ENV=test jest -c ./jest.config.js",
+    "perpare": "rollup -c ./rollup.config.js",
+    "build": "NODE_ENV=production rollup -c./rollup.config.js"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "shallowequal": "^1.1.0"
+  },
+  "peerDependencies": {
+    "react": "^15.0.0 || ^16.0.0"
+  }
+}
