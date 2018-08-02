@@ -33,10 +33,7 @@ const Component = () => (
 In such a case, pass to component a new instance of function when rerender `Component`.
 Then, `shouldComponentUpdate()` of `pure()` return the `true`.
 But, expected `false`, because not changed logic `onClick`.
-<<<<<<< HEAD
-=======
 
 #### :warning: Caution
 
 Expected rerender by case in case if you use High order function.
->>>>>>> b84064d... docs: :memo:
