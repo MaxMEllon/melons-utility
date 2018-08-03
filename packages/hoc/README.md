@@ -3,7 +3,7 @@ TOC
 
 - HoC
     - [`pureIgnoreFunctions()`](#pureIgnoreFunctions)
-
+    - [`onlyNotUpdateByBlackList()`](#onlyNotUpdateByBlackList)
 
 ### `pureIgnoreFunctions()`
 
@@ -37,3 +37,35 @@ But, expected `false`, because not changed logic `onClick`.
 #### :warning: Caution
 
 Expected rerender by case in case if you use High order function.
+
+### `onlyNotUpdateByBlackList()`
+
+##### src: [:memo:](src/onlyNotUpdateByBlackList.js) test: [:white_check_mark:](src/__tests__/onlyNotUpdateByBlackList.test.js)
+
+```javascript
+onlyNotUpdateByBlackList(
+  Array<string>
+): HigherOrderComponent
+```
+
+- example
+
+```javascript
+const enhancer = compose(
+  onlyNotUpdateByBlackList(['onClick']),
+)
+
+const Button = enhancer(({ text, onClick }) => {
+  <button onClick={onClick}>
+    {text}
+  </button>
+})
+
+const Component = () => (
+  <Button
+    text={'foo'}
+    onClick={() => doSomething()}
+  />
+)
+```
+
