@@ -9,6 +9,7 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "lodash.debounce": "^4.0.8",
     "shallowequal": "^1.1.0"
   },
   "peerDependencies": {
